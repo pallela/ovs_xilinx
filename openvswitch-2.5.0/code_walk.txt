@@ -1,0 +1,18 @@
+
+// ingress
+5) ovs_dp_process_packet
+4) ovs_vport_receive
+3) netdev_port_receive , internal_dev_xmit
+2) port_receive
+1) netdev_frame_hook
+<LINUX STACK>
+
+
+
+// egress
+1) ovs_execute_actions()
+2) do_execute_actions()
+3) do_output()
+4) ovs_vport_send() --> vport->ops->send()
+
+
